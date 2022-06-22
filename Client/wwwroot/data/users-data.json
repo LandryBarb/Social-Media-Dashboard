@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "username": "@nathanf",
+    "followers": 1987,
+    "newfollowers": 12,
+    "icon": "./images/icons/icon-facebook.svg"
+  },
+  {
+    "id": 2,
+    "username": "@nathanf",
+    "followers": 1044,
+    "newfollowers": 99,
+    "icon": "./images/icons/icon-twitter.svg"
+
+  },
+  {
+    "id": 3,
+    "username": "@realnathanf",
+    "followers": 11000,
+    "newfollowers": 1099,
+    "icon": "./images/icons/icon-instagram.svg"
+
+  },
+  {
+    "id": 4,
+    "username": "Nathan F.",
+    "followers": 8239,
+    "newfollowers": 144,
+    "icon": "./images/icons/icon-youtube.svg"
+
+  }
+]

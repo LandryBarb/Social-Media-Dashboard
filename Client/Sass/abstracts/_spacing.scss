@@ -1,0 +1,26 @@
+$spacing-base:1rem;
+$lg-value:1;
+
+$spacing:
+(
+    small:
+    (
+        "sm-1":calc(1/8 * $spacing-base),
+        "sm-2":calc(2/8 * $spacing-base),
+        "sm-3":calc(3/8 * $spacing-base),
+        "sm-4":calc(4/8 * $spacing-base),
+        "sm-5":calc(5/8 * $spacing-base),
+        "sm-6":calc(6/8 * $spacing-base),
+        "sm-7":calc(7/8 * $spacing-base),
+    ),
+    large:
+    (
+        "lg-1":calc((1 + 1/8) * $spacing-base),
+        "lg-2":calc((1 + 2/8) * $spacing-base),
+        "lg-3":calc((1 + 3/8) * $spacing-base),
+        "lg-4":calc((1 + 4/8) * $spacing-base),
+        "lg-5":calc((1 + 5/8) * $spacing-base),
+        "lg-6":calc((1 + 6/8) * $spacing-base),
+        "lg-7":calc((1 + 7/8) * $spacing-base),
+    )
+)

@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+@use '../base/typography' as *;
+
+:root {
+    /**Colors Start*/
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+    /**Colors End*/
+    /**Font Sizes Start*/
+    @each $screen-size, $font-size in $type-scale {
+        @if $screen-size == small {
+            @each $size, $value in $font-size {
+                --fs-#{$size}: #{$value};
+            }
+        }
+        @else {
+            @include mediaQry(large) {
+                @each $size, $value in $font-size {
+                    --fs-#{$size}: #{$value};
+                }
+            }
+        }
+    }
+    /**Font Sizes End*/
+    /**Font Weight Start*/
+    @each $font-size, $value in $font-weights {
+        --fw-#{$font-size}: #{$value};
+    }
+    /**Font Weight end*/
+    /**Spacers**/
+    @each $space-size, $names in $spacing {
+        @each $name, $value in $names {
+            --sp-#{$name}: #{$value};
+        }
+    }
+    /**End Spacers**/
+}

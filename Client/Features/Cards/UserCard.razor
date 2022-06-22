@@ -1,0 +1,44 @@
+﻿@inject HttpClient http
+ 
+ 
+ 
+     <article class="card txt_container">
+        <small class="username">
+             <img src="@User.Icon"  class="icon" alt="" />
+            @User.UserName</small>
+        @if (User.Followers > 9999)
+         {
+             <p class="total_followers ">@User.Followers.ToString().Remove(2)k</p>
+         }
+         else
+         {
+         <p class="total_followers">@User.Followers</p>
+             
+         }
+         <p>followers</p>
+        
+ 
+         <small class="new_followers">
+             @if(User.Id == 4)
+             {
+                 <img src="./images/icons/icon-down.svg" alt="" />
+
+             }
+             else
+             {
+             <img src="./images/icons/icon-up.svg" alt="" />
+                 
+             }
+             @User.NewFollowers Today</small>
+         </article>
+ 
+
+@code {
+
+
+    private IEnumerable<User>? Users;
+    [Parameter, EditorRequired]
+    public User User { get; set; } = default!;
+
+
+}

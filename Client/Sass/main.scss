@@ -1,0 +1,33 @@
+@use './base' as *;
+@use './abstracts' as *;
+
+
+@use './design/design' as *;
+
+@use './layout/layout' as *;
+
+
+body {
+    /*background-color: hsl(var(--bg));*/
+    font-family: Inter;
+    background: linear-gradient(to top, hsl(var(--bg-top)) 91%, hsl(var(--bg)) 75%);
+
+    @include mediaQry(small) {
+        
+            background: linear-gradient(to top, hsl(var(--bg-top)) 75%, hsl(var(--bg)) 75%);
+        
+    }
+}
+p{
+    color:hsl(var(--body-secondary));
+}
+h1{
+    color:hsl(var(--body-primary));
+    font-weight:var(--fw-700);
+}
+
+small{
+    color:hsl(var(--body-secondary));
+   font-weight:var(--fw-700);
+}
+

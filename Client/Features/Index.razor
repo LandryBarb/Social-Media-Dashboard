@@ -1,0 +1,222 @@
+﻿@page "/"
+@inject HttpClient http
+
+<PageTitle>Social Media Dashboard</PageTitle>
+
+
+
+<section class="user container">
+    @if (Users !=null)
+    {
+        @foreach (var user in Users)
+        {
+             <UserCard User="user"></UserCard>
+        }
+      
+    }
+</section>
+
+<section class="overview container">
+    <header class="title">Overview - Today</header>
+
+    <!--FACEBOOK-->
+    <article class="card_overview">
+        <div class="count">
+              <p>page views</p>
+
+            <div class="number">
+                87
+            </div>
+        </div>
+            <div class="social">
+            <div>
+            <img src="./images/icons/icon-facebook.svg" alt="" class="icon" />
+
+            </div>
+            <div class="percentage up">
+                <img src="./images/icons/icon-up.svg" alt="" />
+                3%
+            </div>
+    </div>
+    </article>
+
+
+    <article class="card_overview">
+                <div class="count">
+              <p>likes</p>
+
+            <div class="number">
+                52
+            </div>
+        </div>
+            <div class="social">
+            <div>
+            <img src="./images/icons/icon-facebook.svg"  alt="" class="icon" />
+
+            </div>
+            <div class="percentage down">
+                <img src="./images/icons/icon-down.svg" class="down" alt="" />
+                2%
+            </div>
+    </div>
+    </article>
+
+        <!--FACEBOOK-->
+
+    <!--INSTAGRAM-->
+
+   <article class="card_overview">
+            <div class="count">
+          <p>likes</p>
+
+        <div class="number">
+            5462
+        </div>
+    </div>
+        <div class="social ">
+        <div>
+        <img src="./images/icons/icon-instagram.svg"  alt="" class="icon" />
+
+        </div>
+        <div class="percentage up">
+            <img src="./images/icons/icon-up.svg" class="down" alt="" />
+            2257%
+        </div>
+</div>
+</article>
+
+
+   <article class="card_overview">
+            <div class="count">
+          <p>Profile Views</p>
+
+        <div class="number">
+            52k
+        </div>
+    </div>
+        <div class="social ">
+        <div>
+        <img src="./images/icons/icon-instagram.svg"  alt="" class="icon" />
+
+        </div>
+        <div class="percentage up">
+            <img src="./images/icons/icon-up.svg" class="down" alt="" />
+            1375%
+        </div>
+</div>
+</article>
+
+    <!--INSTAGRAM-->
+
+    <!--TWITTER-->
+
+   <article class="card_overview">
+            <div class="count">
+          <p>retweets</p>
+
+        <div class="number">
+            117
+        </div>
+    </div>
+        <div class="social ">
+        <div>
+        <img src="./images/icons/icon-twitter.svg"  alt="" class="icon" />
+
+        </div>
+        <div class="percentage up">
+            <img src="./images/icons/icon-up.svg" class="down" alt="" />
+            2257%
+        </div>
+</div>
+</article>
+
+   <article class="card_overview">
+            <div class="count">
+          <p>likes</p>
+
+        <div class="number">
+            507
+        </div>
+    </div>
+        <div class="social ">
+        <div>
+        <img src="./images/icons/icon-twitter.svg"  alt="" class="icon" />
+
+        </div>
+        <div class="percentage up">
+            <img src="./images/icons/icon-up.svg" class="down" alt="" />
+            553%
+        </div>
+</div>
+</article>
+    <!--TWITTER-->
+
+    <!--YOUTUBE-->
+
+   <article class="card_overview">
+            <div class="count">
+          <p>likes</p>
+
+        <div class="number">
+            107
+        </div>
+    </div>
+        <div class="social ">
+        <div>
+        <img src="./images/icons/icon-youtube.svg"  alt="" class="icon" />
+
+        </div>
+        <div class="percentage down">
+            <img src="./images/icons/icon-down.svg" class="down" alt="" />
+            19%
+        </div>
+</div>
+</article>
+
+
+   <article class="card_overview">
+            <div class="count">
+          <p>total views</p>
+
+        <div class="number">
+            1407
+        </div>
+    </div>
+        <div class="social ">
+        <div>
+        <img src="./images/icons/icon-youtube.svg"  alt="" class="icon" />
+
+        </div>
+        <div class="percentage down">
+            <img src="./images/icons/icon-down.svg" class="down" alt="" />
+            12%
+        </div>
+</div>
+</article>
+    <!--YOUTUBE-->
+
+
+
+
+</section>
+
+
+
+@code{
+    private IEnumerable<User>? Users;
+
+    protected  override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Users = await http.GetFromJsonAsync<IEnumerable<User>>("data/users-data.json");
+        }
+        catch (HttpRequestException ex)
+        {
+
+            System.Console.WriteLine($"There was a problem loading the user data:{ex.Message}");
+        }
+    }
+
+   
+}

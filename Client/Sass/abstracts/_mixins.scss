@@ -1,0 +1,13 @@
+
+//Media Qry 
+$breakpoints:
+(
+    small: 40em,  large: 90em
+);
+
+@mixin mediaQry($key) {
+    $size:map-get($breakpoints, $key );
+    @media screen and (min-width:$size) {
+        @content;
+    }
+}

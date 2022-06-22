@@ -1,0 +1,27 @@
+@use '../abstracts/spacing' as *;
+
+.container{
+    width: min(90rem, 100vw - 2em);
+    margin-inline: auto;
+}
+
+.txt_container{
+    width:min(50ch, 100vw - 2em);
+    margin-inline:auto;
+}
+
+.flow > *:where(:not(:first-child)){
+    margin-block-end: var(--flow-space, var(--sp-lg-5));
+}
+
+.flex{
+    display: flex;
+    gap:var(--gap, var(--sp-sm-3));
+}
+.grid{
+    display: grid;
+    gap:var(--gap, var(--sp-sm-3));
+
+}
+
+//start back here

@@ -1,0 +1,53 @@
+﻿@inherits LayoutComponentBase
+
+
+@using BlazorPro.BlazorSize
+
+<HeadContent>
+    @if (isDark && isAutoTheme)
+    {
+        <link href="css/main-dark.css" rel="stylesheet" />
+
+    }
+    else
+    {
+        <link href="css/main-light.css" rel="stylesheet" />
+          
+    
+    }
+    
+  <link href="css/main.css" rel="stylesheet" />
+    <link href="Client.styles.css" rel="stylesheet" />
+</HeadContent>
+
+<MediaQueryList>
+    <MediaQuery Media="(prefers-color-scheme:dark)" @bind-Matches="isDark"/>
+
+<header class="header container flow">
+    <div class="main_heading flow">
+           <h1 class="fs_300 ">Social Media Dashboard</h1>
+            <p>Total Followers : 23,004</p>
+    </div>
+
+
+        <span class="divider"></span>
+
+    <label for="theme_auto">
+        <p>Dark Mode</p>
+        <input type="checkbox" @bind-value="isAutoTheme"/>
+
+    </label>
+
+</header>
+
+<main>
+@Body
+
+</main>
+</MediaQueryList>
+
+    @code{
+        bool isDark;
+        bool isAutoTheme;
+
+    }

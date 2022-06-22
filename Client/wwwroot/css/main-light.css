@@ -1,0 +1,18 @@
+:root {
+  --bg: var(--clr-white-400);
+  --bg-top: var(--clr-light-400);
+  --bg-card: var(--clr-light-300);
+  --body-primary: var(--clr-night-400);
+  --body-secondary: var(--clr-light-200);
+  --facebook: var(--clr-social-facebook);
+  --twitter: var(--clr-social-twitter);
+  --instagram-1: var(--clr-social-instagram_1);
+  --instagram-2: var(--clr-social-instagram_2);
+  --youtube: var(--clr-social-youtube);
+  --toggle-1: var(--clr-toggle-light);
+  --toggle-2: var(--clr-toggle-light);
+  --up: var(--clr-grass-400);
+  --down: var(--clr-fire-400);
+}
+
+/*# sourceMappingURL=main-light.css.map */
