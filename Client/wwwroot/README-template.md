@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/LandryBarb/Social-Media-Dashboard
+- Live Site URL: https://socialmediadashboardfem.netlify.app/
 
 ## My process
 
@@ -55,14 +55,12 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+First time dealing with border styling. Had trouble with the instagram card border. Checked out Css Tricks for help.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+```Css
+<h1>Some CSS code I'm proud of</h1>
 ```
-```css/Sass - I used a psuedo element to display the linear-gradient border on the instagram card
+```Css/Sass - I used a psuedo element to display the linear-gradient border on the instagram card
 .card{
 
     &:nth-child(3) {
@@ -109,7 +107,7 @@ I want to go back and make the Overview section load 'dyamically from the json f
 
 ### Useful resources
 
-- [Css Tricks](https://css-tricks.com/) - This is where i got the idea to use the psuedo element for the instagram card gradient
+- [Css Tricks](https://css-tricks.com/) - This is where I got the idea to use the psuedo element for the instagram card gradient
 - [Layout Land](https://www.youtube.com/watch?v=tFKrK4eAiUQ) - I watch all of Jen Simmons talks and experiments with CSS grid to inspire me with layout design
 
 
